@@ -1,0 +1,148 @@
+html
+	font-size: 100%
+	width: 100%
+
+input, a, button, textarea, select
+	outline: none
+
+*::-webkit-input-placeholder
+	color: #909090
+
+*:-moz-placeholder
+	color: #909090
+
+*::-moz-placeholder
+	color: #909090
+
+*:-ms-input-placeholder
+	color: #909090
+
+.swiper-button-disabled
+	opacity: .5
+	pointer-events: none
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select, input[type="submit"], button
+	-webkit-appearance: none
+	appearance: none
+	font-family: inherit
+
+	&:focus
+
+		&::-webkit-input-placeholder
+			opacity: 0
+
+		&:-moz-placeholder
+			opacity: 0
+
+		&::-moz-placeholder
+			opacity: 0
+
+		&:-ms-input-placeholder
+			opacity: 0
+
+/*
+input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select
+	border-radius: 0
+
+*/
+
+
+*, *:after, *:before
+	box-sizing: border-box
+
+*[v-cloak]
+	display: none
+
+address
+	font-weight: inherit
+
+body
+	min-width: 1000px
+	line-height: calc(22 / 14)
+	font-family: var(--default-font)
+	font-weight: 400
+	font-size: var(--base-font-size)
+	color: var(--body-text-color)
+	background: var(--body-bg-color)
+	position: relative
+	left: 0
+	display: flex
+	flex-direction: column
+	width: 100%
+	min-height: 100vh
+
+
+select
+	-webkit-appearance: none
+	/* for FF */
+	-moz-appearance: none
+	text-indent: 0.01px
+	text-overflow: ''
+	/* for IE */
+	-ms-appearance: none
+	appearance: none!important
+
+	&::-ms-expand 
+		display: none
+
+.head, .footer
+	flex: none
+
+#content
+	flex: 1 1 auto
+
+.inner-content
+	flex: 1 1 auto
+	// position: relative
+	z-index: 2
+
+a
+	color: #000
+	font-weight: inherit
+	text-decoration: none
+
+	&[href^="tel"], &[href^="mail"]
+		white-space: nowrap
+
+	&:not([class])
+		color: var(--main-color-darken)
+		border-bottom: 1px solid transparent
+
+		&:hover, &:focus
+			border-color: currentColor
+
+.wrapper
+	max-width: var(--base-width)
+	padding: 0 20px
+	margin: 0 auto
+	box-sizing: content-box
+
+input[type="submit"], button
+	cursor: pointer
+
+img, svg
+	max-width: 100%
+
+li
+	list-style: none
+
+.table-wrap
+	position: relative
+
+	&__track
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+
+	&__shadow
+		width: 12px
+		position: absolute 0 *
+		pointer-events: none
+		background: linear-gradient(to right, rgba(#fff, .0001), rgba(#000, .1))
+		opacity: 0
+
+		&--left
+			left: 0	
+			transform: rotateZ(180deg)
+
+		&--right
+			right: 0	

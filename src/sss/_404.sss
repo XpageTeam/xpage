@@ -1,0 +1,105 @@
+.page-404
+	background: #1F1F1F
+
+	&:before, &:after
+		display: none
+
+	.footer
+		margin: 0
+
+		&__wrap
+			border: none
+
+	.inner-content
+		margin: 0 !important
+		padding: 30px 0
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+	#content
+		display: flex
+		flex-direction: column
+
+.p-404
+	flex: 1 1 auto
+	display: flex
+	align-items: center
+	// padding: 0 0 100px
+
+	&__number
+		font-weight: bold
+		font-size: em(280)
+		letter-spacing: .1em
+		color: var(--main-color)
+		margin-right: 80px
+
+	&__text
+
+		&-title
+			font-size: em(24)
+			font-weight: 500
+			line-height: 122%
+			margin: 0 0 40px
+			max-width: 430px
+
+		&-link
+			display: inline-block
+			color: #fff
+
+			&:hover
+
+				.home-btn
+					background-color: #fff
+
+			.home-btn
+				transition: background-color .3s ease
+
+.home-btn
+	background: url("../img/ico-home.svg") center no-repeat
+	background-color: #151515
+	border-radius: 5px
+	display: inline-block
+	size: 49px
+
+.p-404-links
+	display: flex
+	align-items: center
+
+	&__home
+		flex: none
+
+		&:not(:last-child)
+			margin-right: 25px
+
+	&__text
+		font-size: 14px
+		max-width: 225px
+
+@media (max-width: 1300px)
+	.p-404
+
+		&__number
+			font-size: 200px
+
+@media (max-width: 1000px)
+	.p-404
+		flex-direction: column
+		// align-items: flex-start
+		justify-content: center
+
+		&__number
+			margin: 0
+
+		&__text
+			display: flex
+			align-items: center
+			flex-direction: column
+			max-width: 450px
+
+			&-title
+				text-align: center
+
+@media (max-width: 660px)
+	.p-404__number
+		font-size: 140px

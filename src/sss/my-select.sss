@@ -1,0 +1,42 @@
+.my-select
+
+	&__list
+		overflow-y: auto
+		max-height: 300px
+		overscroll-behavior: none
+
+		&-cont
+			user-select: none
+			position: absolute calc(100% - 1px) 0 *
+			z-index: 1
+			border: 1px solid var(--border-color)
+			background: #fff
+			padding: 16px
+			display: none
+			
+
+		&::-webkit-scrollbar
+			width: 13px
+
+			&-thumb, &-track
+				border-left: 10px solid #fff
+
+			&-thumb
+				background: var(--main-color)
+
+			&-track
+				background: var(--border-color)
+		
+		&-option
+			transition: color .3s ease
+			padding: 12px 0
+			color: #909090
+
+			&:not(:first-child)
+				border-top: 1px solid var(--border-color)
+
+			&:not(.selected)
+				cursor: pointer
+
+			&:hover, &.selected
+				color: var(--main-color)

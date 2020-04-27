@@ -1,0 +1,208 @@
+strong
+	font-weight: bold
+
+p
+	margin-top: 27px
+
+@custom-selector :--heading h2, h3, h4, h5, h6
+
+h2, h3, h4, h5, h6, p, img, table, .table-wrap, ul, ol
+
+	&:first-child
+		margin-top: 0
+
+:--heading
+	position: relative
+	text-transform: lowercase
+
+	&:first-letter
+		text-transform: uppercase	
+
+	&:before
+		content: ""
+		position: absolute em(9) calc(100% + 23px) * *
+		transform: rotateZ(45deg)
+		background: var(--main-color)
+		size: 5px
+
+h2, h3, h4, h5, h6
+	font-weight: 300
+	margin-bottom: 5px
+	
+	&:not(:first-child)
+		margin-top: 32px
+
+	+ *
+		margin-top: 0
+
+h2
+	font-size: em(28)
+	// line-height: calc(32 / 28)
+	line-height: 128%
+
+h3
+	font-size: em(23)
+	// line-height: calc(28 / 25)
+	line-height: 146%
+
+h4
+	font-size: em(20)
+	// line-height: calc(28 / 22)
+	line-height: 182%
+
+h5
+	font-size: em(18)
+	// line-height: calc(24 / 19)
+	line-height: 135%
+
+h6
+	font-size: em(16)
+	line-height: 140%
+
+blockquote
+	background: var(--second-color)
+
+[align="right"]
+	float: right
+	margin-left: 60px
+
+[align="left"]
+	float: left
+	margin-right: 60px
+
+
+img[height]
+	height: auto
+
+[align]
+	margin-bottom: 35px
+
+	img
+		display: block
+		margin: 0
+
+table:not([class])
+	margin: 52px 0 20px
+
+	thead
+
+		th, td
+			background: #151515
+			text-align: left
+			padding-top: 22px
+			padding-bottom: 22px
+			font-size: em(16)
+
+	td, th
+		padding: 16px 60px
+		font-weight: inherit
+		font-size: em(14)
+
+		&:not([valign]), &[valign="middle"]
+			vertical-align: middle
+
+		&[valign="top"]
+			vertical-align: top
+
+		&[valign="bottom"]
+			vertical-align: bottom
+
+	td
+		transition background .3s ease
+
+	&[cellspacing]:not([cellspacing="1"]):not([cellspacing="0"])
+
+table[border="1"]:not([class])
+	min-width: 100%
+
+	td, th
+		border: 1px solid #2E2E2E
+
+
+ul, ol
+
+	&:not([class]) li
+
+		&:not(:first-child)
+			margin: 3px 0 0
+
+		&:before
+			display: inline-block
+
+		ul, ol
+			margin-bottom: 20px
+			margin-top: 0
+
+		li
+
+			&:before
+				margin-right: 10px !important
+
+			&:not(:first-child)
+				margin-top: 5px
+
+ul
+
+	&:not([class])
+
+		> li
+
+			&:before
+				content: "—"
+				margin: 0 16px 2px 0
+				display: inline-block
+				border-radius: 50%
+				background: var(--mainColor)
+				size: 6px
+				text-indent: 0
+
+			li
+				text-indent: 16px
+
+		ul
+
+			> li
+
+				&:before
+					content: "-"
+
+ol:not([class])
+
+
+	> li
+		list-style-type: decimal
+		list-style-position: inside
+
+		li
+			font-weight: 300
+			margin: 23px 0 0 !important
+
+@media (max-width: 660px)
+	[align]
+		float: none
+		width: 100%
+		margin-left: 0
+		margin-right: 0
+
+		img
+			width: inherit
+
+	h2
+		font-size: em(24)
+
+	h3
+		font-size: em(21)
+
+	h4
+		font-size: em(18)
+
+	h5
+		font-size: em(16)
+
+	h6
+		font-size: em(14)
+
+	:--heading
+
+		&:before
+			display: none
