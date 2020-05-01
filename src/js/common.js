@@ -17,3 +17,16 @@ document.addEventListener("DOMContentLoaded", function(){
 		transitionEffect: "slide",
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+
+	
+	$(window).on("load scroll", function(){
+		if ($(window).scrollTop() > 45){
+			$(".head-cont").addClass('js__scroll-offset');
+		}else{
+			$(".head-cont").removeClass('js__scroll-offset');
+		}
+	});
+
+});

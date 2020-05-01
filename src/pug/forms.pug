@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Формы
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		#app
+			//- include inc/header.pug
+			main#content
+				.wrapper
+					br
+					br
+					br
+					ul
+						li
+							a(href="#enter").fancybox Вход в личный кабинет
+						li
+							a(href="#call").fancybox Заказать обратный звонок
+						li
+							a(href="#request").fancybox Форма обратной связи
+						li
+							a(href="#thanks").fancybox Спасибо за покупку
+
+
+		include inc/forms.pug
+		include inc/footer.pug 
+		include inc/scripts.pug 

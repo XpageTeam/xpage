@@ -1,0 +1,540 @@
+@import "_mobile-menu.sss"
+@import "_header-case.sss"
+
+:root
+	--main-color: #0072FF
+
+// require("btns.sss")
+	
+// @import "_form-elements.sss"
+// @import "forms.sss"
+
+
+
+#content
+	margin-top: -52px
+
+
+
+.mmi
+	.screen
+		&-title
+			font-size: rem(80px)
+			line-height: 94%
+			font-weight: bold
+
+		&-label
+			font-size: rem(12)
+			line-height: 24px
+			text-transform: uppercase
+			color: var(--main-color)
+
+.screen-cont
+	&--main
+		padding: 80px 0 145px
+		background: 
+			url('../img/screen-1-bg.png') no-repeat right top,
+			url('../img/circle--orange.svg') no-repeat left  top 
+
+		.screen
+			width: clamp(50%, 755px, 100%)
+
+			&-title
+				font-weight: bold
+				font-size: rem(90)
+				line-height: 92px
+
+			&-text
+				margin-bottom: 156px
+
+				span
+					color: var(--main-color)
+					margin-right: 5px
+
+			&-subtitle
+				font-size: rem(18)
+
+			&-blockquote
+				font-style: italic
+				font-weight: normal
+				font-size: rem(18)
+				line-height: 41px
+				margin-top: 60px
+
+			&-reviews
+				color: rgba(0, 114, 255, 0.5)
+				font-style: italic
+				font-weight: 500
+
+	&--story
+		padding: 120px 0 90px
+		background: url('../img/circle-yellow.png') no-repeat right top 20%, var(--main-color)
+
+		.screen
+			&-text
+				font-size: rem(26)
+				line-height: 41px
+				color: #FFFFFF
+				width: clamp(30%, 945px, 100%)
+
+			
+			&-solution
+				&__list
+					margin-top: 75px
+					column-count: 2
+					gap: 125px
+					max-width: 1240px
+
+				// &__item
+				// 	width: clamp(40%, 560px, 100%)
+
+		.ss__text
+			font-size: rem(18)
+			line-height: 41px
+			color: #FFFFFF
+
+
+	
+	&--problem
+		padding-top: 130px
+		margin:  0 120px
+		background: url('../img/line-bg.svg') no-repeat right top
+
+		.screen
+			&-title
+				margin-bottom: 45px
+
+			&-text
+				font-size: 26px
+				line-height: 158%
+				max-width: 1200px
+
+	&--solution
+		margin: 120px 0 150px
+		background: url('../img/bg-reshenie.png') no-repeat left top
+
+		.screen
+			width: clamp(40%, 925px, 100%)
+			margin-left: auto
+
+	&--telephony
+		background: url('../img/circle-blue-blur.svg') no-repeat left bottom 5%, #000000
+		color: #fff
+		padding: 160px 0
+		position: relative
+		background-attachment: fixed
+
+		.st__btn
+			size: 273px
+			border-radius: 50%
+			background: url('../img/btn-blue.png') no-repeat center
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute 0 0 * *
+			font-weight: bold
+			font-size: 16px
+			line-height: 25px
+			color: #ffffff
+			text-align: center
+
+			span
+				position: relative
+
+				&:after
+					content: ''
+					size: 8px
+					display: block
+					border-right: 1px solid #fff
+					border-bottom: 1px solid #fff
+					transform: rotate(45deg)
+					margin: 25px auto 0
+
+		img
+			border-radius: 10px
+
+		.screen
+			position: relative
+
+			&-title
+				margin-bottom: 80px
+
+			&__text
+
+
+				li
+					line-height: 34px
+
+					&:not(:last-child)
+						margin-bottom: 20px
+
+			&-solution
+				display: flex
+				margin-top: 60px
+
+
+				&__img
+					width: clamp(50%, 880px, 100%)
+					flex: none
+					display: flex
+					flex-direction: column
+					align-items: flex-end
+
+					img
+						&:not(:first-child)
+							margin-top: 100px
+
+				&__list
+					margin-top: 60px
+
+				&__info
+					margin-left: 60px
+
+					.screen
+
+						&__text
+							margin-top: 0
+
+	&--collection
+		background: url('../img/bred.svg') no-repeat right top 20%, #000
+		background-attachment: fixed
+		color: #fff
+		padding: 150px 0
+
+		.wrapper
+			position: relative
+
+		img
+			border-radius: 10px
+
+		.screen-solution__item
+			&:first-child
+				margin-top: 0
+
+
+		.screen
+			&-title
+				margin-bottom: 50px
+
+			&-title, &__text
+				max-width: 1060px
+
+			&-solution
+				display: flex
+				margin-top: 60px
+
+
+				&__img
+					width: clamp(50%, 880px, 100%)
+					flex: none
+					display: flex
+					flex-direction: column
+					align-items: flex-end
+
+					img
+						&:not(:first-child)
+							margin-top: 100px
+
+				&__info
+					margin-left: 60px
+
+					.screen
+
+						&__text
+							margin-top: 0
+
+	&--report
+		padding: 130px 0
+
+		.screen
+			&-title
+				margin-bottom: 60px	
+
+			&__text
+				max-width: 1070px
+				font-size: rem(18)
+				line-height: 41px
+
+			&-solution
+				margin-top: 50px
+
+				&__list
+					column-count: 2
+					max-width: 1240px
+					gap: 130px
+
+				&__item
+					margin-top: 0
+					break-inside: avoid
+
+			&__img
+				margin-top: 70px
+
+	&--services
+		background: url('../img/bred-2.svg') no-repeat left bottom, var(--main-color)
+		background-attachment: fixed
+		color: #fff
+		padding: 135px 0
+
+		.screen
+			&-title
+				margin-bottom: 40px
+
+			&-text
+				font-size: 26px
+				line-height: 41px
+				max-width: 1010px
+
+			&__img
+				display: flex
+				flex-wrap: wrap 
+				margin: 60px 0 -50px -50px
+
+				img
+					border-radius: 10px
+					display: block
+
+				figure
+					width: calc((100% - 50px * 2) / 2)
+					margin: 0 0 50px 50px
+
+				figcaption
+					font-size: 12px
+					line-height: 19px
+					margin-top: 20px
+
+
+
+		.screen-solution
+			display: flex
+			margin: 85px 0
+
+			&__list
+				width: clamp(570px, 570px, 100%)
+				margin-right: 30px
+
+			&__item
+				padding-left: 40px
+				background: url('../img/ico-dots.svg') no-repeat top 10px left
+
+
+				
+
+				&:not(:last-child)
+					margin-bottom: 30px
+
+			.ss__text
+				font-size: rem(18)
+				line-height: 34px
+				
+
+
+
+			&__video
+				flex: none
+				margin-left: auto
+
+				img
+					border-radius: 10px
+
+	&--statistics
+		padding: 120px 0 100px
+		background: url('../img/bred-2.svg') no-repeat left top -68px
+		background-attachment: fixed
+
+		.screen
+			&-title
+				margin-bottom: 60px
+
+			&-text
+				font-size: rem(18)
+				line-height: 34px
+
+	&--final
+		background: 
+			url('../img/bred-final.png') no-repeat left 10% bottom 0, 
+			url('../img/circle-blue-blur-right.svg') no-repeat right fixed, #000
+		color: #fff
+		padding: 140px 0
+
+		.screen
+			position: relative
+
+			&-title, &-text
+				max-width: 730px
+
+			&-text
+				font-size: rem(18)
+				line-height: 41px
+				margin-top: 64px
+
+				p
+					margin-top: 40px
+
+			&__img
+				position: absolute 0 0 * *
+				transform: translate3d(28%,86px,0)
+
+		.btn
+			size: 274px
+			border-radius: 50%
+			background: url('../img/btn--orange.png') no-repeat	 center
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			margin-top: 130px
+			position: relative
+			font-weight: bold
+			font-size: 16px
+			line-height: 25px
+			color: #FFFFFF
+			text-align: center
+
+
+			&:after
+				content: ''
+				size: 8px
+				display: block
+				border-right: 1px solid #fff
+				border-bottom: 1px solid #fff
+				transform: rotate(45deg)
+				margin: 25px auto 0
+
+
+
+.statistics
+	margin-top: 15px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -65px -85px
+		max-width: 1385px
+
+	&__item
+		width: calc((100% - 85px * 4) / 4)
+		margin: 0 0 65px 85px
+
+		&:nth-last-child(2)
+			width: calc((100% - 85px * 2) / 3)
+
+		&-num
+			font-weight: bold
+			font-size: rem(60)
+			color: var(--main-color)
+			height: 85px
+
+			span
+				font-size: rem(40)
+
+		&-title
+			font-weight: bold
+			font-size: rem(18)
+			line-height: 25px
+			color: var(--main-color)
+			margin-top: 5px
+
+		&-text
+			font-size: rem(14)
+			line-height: 25px
+			margin-top: 20px
+
+	&__btn
+		max-width: 405px
+		align-self: center
+		margin-left: auto
+		display: flex
+		margin-bottom: 75px
+
+
+		a
+			padding: 40px 50px
+			border-radius: 10px
+			background: var(--main-color)
+			color: #fff
+			font-weight: bold
+			font-size: rem(18)
+			line-height: 25px
+
+	
+
+
+
+.screen-case
+	.screen__text
+		font-size: rem(18)
+		line-height: 41px
+		margin-top: 20px
+		max-width: 800px
+
+
+.circle
+	position: absolute * 0 0 *
+	transform: translate3d(50px,92%,0)
+
+.promo-line
+	background-image: url('../img/line.svg') 
+	background-repeat: repeat-x
+	background-position: center
+	background-color: var(--main-color)
+	size: 100% 60px
+	animation: moveBg 20s linear infinite
+
+@keyframes moveBg
+	0%
+		background-position: center left
+
+	100%
+		background-position: center left -3355px
+
+.ss
+	&__title
+		font-weight: bold
+		font-size: rem(18)
+		line-height: 144%
+		margin-bottom: 20px
+
+	&__text
+		font-size: rem(14)
+		line-height: 26px
+			
+.screen-solution__item
+
+	&:not(:last-child)
+		margin-bottom: 60px
+
+.sp-stage
+	margin-top: 60px
+	max-width: 820px
+
+	&__list
+		counter-reset: i
+
+	&__item
+		position: relative
+		counter-increment: i
+		padding-left: 95px
+		font-size: 18px
+
+		&:not(:last-child)
+			margin-bottom: 35px
+
+		&:before
+			content: counter(i) ""
+			size: 50px
+			border-radius: 50%
+			background-color: var(--main-color)
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute calc(50% - 25px) * * 0
+			font-weight: bold
+			font-size: 20px
+			color: #fff
+	
+
+
+
+
+						

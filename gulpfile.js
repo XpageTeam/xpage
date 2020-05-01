@@ -49,9 +49,12 @@ gulp.task('browser-sync', () =>  {
 	]).on("change", browserSync.reload);
 });
 
+
+
 gulp.task("postcss", _ => 
 	gulp.src([
-			"src/sss/main.sss"
+			"src/sss/main.sss",
+			"src/sss/case-mmi.sss"
 		])
 		.pipe(sourcemaps.init())
 		.pipe($.postcss([
@@ -96,6 +99,7 @@ gulp.task("move:files", _ =>
 gulp.task('imagemin', () =>  
 	gulp.src([
 			'src/img/**/*',
+			'!src/img/**/*.mp4',
 			], {since: gulp.lastRun("imagemin")})
 		 .pipe($.cache($.imagemin([
 				$.imagemin.jpegtran({

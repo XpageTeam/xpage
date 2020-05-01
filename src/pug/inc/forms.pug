@@ -1,3 +1,153 @@
-.popup#print-stats
-	.popup__title Распечатать статистику
-	.popup__content
+.popup.popup--big#enter
+	.form
+		.form__title Вход в личный кабинет
+		.form__soc--mobile
+			.soc
+				a(href="").soc__link
+					img(src="img/ico-inst.svg", alt="")
+				a(href="").soc__link
+					img(src="img/ico-vk.svg", alt="")
+				
+			.soc-text Вход в один клик
+
+		form(action="#")
+			.form__inputs
+				.form__inputs
+					.form__inputs-input
+						.default-input
+							input.default-input__input(type="tel" inputmode="tel" pattern='\\+7\\s\\([0-9]{3}\\)\\s[0-9]{3}-[0-9]{2}-[0-9]{2}' placeholder="+7 (351)-___-__-__" required)
+							label.default-input__label Логин / E-mail / Телефон
+							.default-input__error
+								.error-text
+									<!-- текст ошибки -->
+					.form__inputs-input
+						.default-input
+							span.ico-eye
+							input.default-input__input(type="password" placeholder=" " value="")
+							label.default-input__label Пароль
+							.default-input__error
+								.error-text
+									<!-- текст ошибки -->
+						div Получить одноразовый пароль по SMS
+					.form__inputs-input
+						.captcha
+							.captcha-input
+								input(type="text" placeholder="Введите код с картинки").default-input__input
+							.captcha-img
+								img(src="img/captcha.jpg", alt="")
+					.form__inputs-input
+						.default-input.default-input--checkbox
+							input(type="checkbox" id="1" hidden).default-checkbox__input
+							label(for="1").default-checkbox__label Запонить меня
+
+			.form__submit
+				.form__submit-btn
+					input.default-btn(type="submit" value="Отправить")
+				.form__submit-btn
+					a.default-btn(href="") Восстановление пароля
+				.form__submit-btn.form__submit-btn--mobile
+					a.default-btn(href="") Зарегистрироваться
+	.form__info
+		.form__title Еще не зарегистрированы?
+		.form__text
+			p Преимущества зарегистрированных пользователей
+			ul
+				li Получение информации о новинках и акциях
+				li Бонусы постоянным покупателям
+				li Просмотр истории заказов в личном кабинете
+		.form__submit-btn
+			a.default-btn(href="") Зарегистрироваться
+		.form__soc
+			.soc
+				a(href="").soc__link
+					img(src="img/ico-inst.svg", alt="")
+				a(href="").soc__link
+					img(src="img/ico-vk.svg", alt="")
+				
+			.soc-text Вход в один клик
+			
+
+.popup#call
+	.form
+		.form__title Заказать обратный звонок
+		form(action="#")
+			.form__inputs
+				.form__inputs
+					.form__inputs-input
+						.default-input
+							input.default-input__input(type="tel" inputmode="tel" pattern='\\+7\\s\\([0-9]{3}\\)\\s[0-9]{3}-[0-9]{2}-[0-9]{2}' placeholder="")
+							label.default-input__label Телефон
+							.default-input__error
+								.error-text
+									<!-- текст ошибки -->
+					.form__inputs-input
+						.default-input
+							input.default-input__input.error(type="text" placeholder="" value="")
+							label.default-input__label Введите Ваше имя
+							.default-input__error
+								.error-text Ошибка
+									
+					
+			.form__submit
+				.form__submit-text Нажимая кнопку, Вы даете информированное согласие на
+					a(href="#") на обработку моих персональных данных
+				.form__submit-btn
+					input.default-btn(type="submit" value="Отправить")
+
+
+.popup.popup--big#request
+	.form
+		.form__title Форма обратной связи
+		form(action="#")
+			.form__inputs
+				.form__inputs.form__inputs--2
+					.form__inputs-input
+						.default-input
+							input.default-input__input(type="text" placeholder="" value="")
+							label.default-input__label Имя
+							.default-input__error
+								.error-text
+									<!-- текст ошибки -->
+					.form__inputs-input
+						.default-input
+							input.default-input__input(type="tel" inputmode="tel" pattern='\\+7\\s\\([0-9]{3}\\)\\s[0-9]{3}-[0-9]{2}-[0-9]{2}' placeholder="+7 (900) 000-00-00")
+							label.default-input__label Телефон
+							.default-input__error
+								.error-text
+									<!-- текст ошибки -->
+					.form__inputs-input
+						.default-input
+							input.default-input__input(type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$" inputmode="email" placeholder="mail@yandex.ru")
+							label.default-input__label E-mail
+							.default-input__error
+								.error-text
+									<!-- текст ошибки -->
+					.form__inputs-input.form__inputs-input--row-2
+						.default-input
+							textarea.default-input__input.default-input__input--textarea
+							label.default-input__label Текст сообщения
+					.form__inputs-input
+						.default-input
+							input.default-input__input.default-input__input--file(type="file" name="file" accept="Docx, exсel, pdf, jpg, png" id="price-file")
+							.default-input__input-filetext
+								input.default-input__input(type="text" readonly="" placeholder="Docx, exсel, pdf, jpg, png")
+								label.default-input__label--file(for="price-file")
+							label.default-input__label файл с дополнительной информацией по заявке
+			.form__submit
+				.form__submit
+					.form__submit-btn
+						input.default-btn(type="submit" value="Отправить")
+					.form__submit-text Нажимая на кнопку отправки сообщения, я соглашаюсь
+						br
+						| на обработку моих 
+						a(href="#") персональных данных
+
+
+			
+
+.popup.popup--after#thanks
+	.form
+		.form__title Спасибо за покупку
+		.form__text 
+			a(href="") Ваш заказ 30092019-0263<br> 
+			| в интернет-магазине Арт-Квартал принят

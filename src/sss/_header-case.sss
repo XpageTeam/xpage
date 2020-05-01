@@ -1,0 +1,23 @@
+.head
+	display: flex
+	justify-content: flex-end
+	align-items: center
+
+	&-cont
+		position: sticky 64px 0 * 0
+		z-index: 10
+		bacdrop-filter: blur(10)
+		transition: top .3s ease, background .3s ease
+		
+		&.js__scroll-offset
+			background: rgba(255,255,255, .3)
+			top: 0
+
+.burger
+	&-cont
+		display: flex
+		align-items: center
+		background-size: cover
+		padding-left: 20px
+	
+

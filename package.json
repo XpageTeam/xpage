@@ -32,7 +32,9 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-util": "^3.0.8",
     "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
     "imports-loader": "^0.8.0",
+    "jquery": "^3.5.0",
     "postcss": "^7.0.14",
     "postcss-assets": "^5.0.0",
     "postcss-attribute-case-insensitive": "^3.0.1",
@@ -51,8 +53,7 @@
     "vinyl-ftp": "^0.6.1",
     "webpack": "^4.29.6",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.0",
-    "imagemin-pngquant": "^8.0.0"
+    "webpack-cli": "^3.3.0"
   },
   "browserslist": [
     ">1%",
